@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3797B00E198BB1F70021C039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797B00D198BB1F70021C039 /* AppDelegate.swift */; };
-		3797B010198BB1F70021C039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797B00F198BB1F70021C039 /* ViewController.swift */; };
+		3797B010198BB1F70021C039 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797B00F198BB1F70021C039 /* MainViewController.swift */; };
 		3797B013198BB1F70021C039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3797B011198BB1F70021C039 /* Main.storyboard */; };
 		3797B015198BB1F70021C039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3797B014198BB1F70021C039 /* Images.xcassets */; };
 		3797B021198BB1F70021C039 /* KimsufiStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797B020198BB1F70021C039 /* KimsufiStockTests.swift */; };
@@ -28,7 +28,7 @@
 		3797B008198BB1F70021C039 /* KimsufiStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimsufiStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3797B00C198BB1F70021C039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3797B00D198BB1F70021C039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3797B00F198BB1F70021C039 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3797B00F198BB1F70021C039 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3797B012198BB1F70021C039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3797B014198BB1F70021C039 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3797B01A198BB1F70021C039 /* KimsufiStockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KimsufiStockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				3797B00D198BB1F70021C039 /* AppDelegate.swift */,
-				3797B00F198BB1F70021C039 /* ViewController.swift */,
+				3797B00F198BB1F70021C039 /* MainViewController.swift */,
 				3797B011198BB1F70021C039 /* Main.storyboard */,
 				3797B014198BB1F70021C039 /* Images.xcassets */,
 				3797B00B198BB1F70021C039 /* Supporting Files */,
@@ -158,6 +158,7 @@
 				TargetAttributes = {
 					3797B007198BB1F60021C039 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = EMXZX9H3PQ;
 					};
 					3797B019198BB1F70021C039 = {
 						CreatedOnToolsVersion = 6.0;
@@ -208,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3797B010198BB1F70021C039 /* ViewController.swift in Sources */,
+				3797B010198BB1F70021C039 /* MainViewController.swift in Sources */,
 				3797B00E198BB1F70021C039 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,9 +326,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KimsufiStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -336,9 +340,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KimsufiStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -395,6 +402,7 @@
 				3797B026198BB1F70021C039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3797B027198BB1F70021C039 /* Build configuration list for PBXNativeTarget "KimsufiStockTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +411,7 @@
 				3797B029198BB1F70021C039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool
+    {
         // Override point for customization after application launch.
         return true
     }
@@ -40,7 +41,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func application(application: UIApplication!, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!)
+    {
+        var characterSet: NSCharacterSet = NSCharacterSet(charactersInString: "<>")
+        
+        var deviceTokenString = (deviceToken.description as NSString)
+            .stringByTrimmingCharactersInSet(characterSet)
+            .stringByReplacingOccurrencesOfString(" ", withString: "") as String
+        
+        println(deviceTokenString)
+    }
+    
+    func application( application: UIApplication!, didFailToRegisterForRemoteNotificationsWithError error: NSError! )
+    {
+        println(error.localizedDescription)
+    }
 
 }
 
