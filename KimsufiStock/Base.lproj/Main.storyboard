@@ -108,7 +108,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="i4N-Dg-baE">
-                                        <rect key="frame" x="231" y="13" width="51" height="31"/>
+                                        <rect key="frame" x="231" y="16" width="51" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="ks5aSwitchDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="f9P-GQ-a3V"/>
@@ -162,6 +162,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ks1Switch" destination="09H-Qr-gUe" id="XAP-RP-w9h"/>
+                        <outlet property="ks2Switch" destination="xfl-Oq-TvO" id="QP4-cM-CMx"/>
+                        <outlet property="ks3Switch" destination="EJP-n4-oio" id="yOg-oX-Vsc"/>
+                        <outlet property="ks4Switch" destination="4a2-vZ-CqM" id="Hbv-e9-6e3"/>
+                        <outlet property="ks5aSwitch" destination="i4N-Dg-baE" id="e84-ws-GZw"/>
+                        <outlet property="ks5bSwitch" destination="jRx-rR-FaA" id="qFu-NG-8Mz"/>
+                        <outlet property="ks6Switch" destination="hFs-cm-OQe" id="45w-su-SCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

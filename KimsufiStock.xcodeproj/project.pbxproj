@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3734407819A76F2000D772F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734407719A76F2000D772F5 /* User.swift */; };
+		3734407B19A770F900D772F5 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734407A19A770F900D772F5 /* MockService.swift */; };
+		3734407E19A771D200D772F5 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734407D19A771D200D772F5 /* UserVO.swift */; };
+		3734408019A776D100D772F5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734407F19A776D100D772F5 /* APIService.swift */; };
+		3734408619A779B800D772F5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3734408519A779B800D772F5 /* SwiftyJSON.swift */; };
 		3797B00E198BB1F70021C039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797B00D198BB1F70021C039 /* AppDelegate.swift */; };
 		3797B010198BB1F70021C039 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797B00F198BB1F70021C039 /* MainViewController.swift */; };
 		3797B013198BB1F70021C039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3797B011198BB1F70021C039 /* Main.storyboard */; };
 		3797B015198BB1F70021C039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3797B014198BB1F70021C039 /* Images.xcassets */; };
 		3797B021198BB1F70021C039 /* KimsufiStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797B020198BB1F70021C039 /* KimsufiStockTests.swift */; };
+		97984CB4476C4FABB4E469D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F749A2F54B67442191B47A0C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3734407719A76F2000D772F5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3734407A19A770F900D772F5 /* MockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		3734407D19A771D200D772F5 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
+		3734407F19A776D100D772F5 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3734408219A7777000D772F5 /* KimsufiStock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KimsufiStock-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		3734408519A779B800D772F5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		3797B008198BB1F70021C039 /* KimsufiStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimsufiStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3797B00C198BB1F70021C039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3797B00D198BB1F70021C039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +46,8 @@
 		3797B01A198BB1F70021C039 /* KimsufiStockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KimsufiStockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3797B01F198BB1F70021C039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3797B020198BB1F70021C039 /* KimsufiStockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimsufiStockTests.swift; sourceTree = "<group>"; };
+		39DB8C4C2BD84B5B99ADF1B3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F749A2F54B67442191B47A0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97984CB4476C4FABB4E469D7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +69,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3734407519A76F0A00D772F5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3797B00F198BB1F70021C039 /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3734407619A76F1600D772F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3734407719A76F2000D772F5 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3734407919A770C000D772F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3734407A19A770F900D772F5 /* MockService.swift */,
+				3734407F19A776D100D772F5 /* APIService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		3734407C19A771C500D772F5 /* VOs */ = {
+			isa = PBXGroup;
+			children = (
+				3734407D19A771D200D772F5 /* UserVO.swift */,
+			);
+			name = VOs;
+			sourceTree = "<group>";
+		};
 		3797AFFF198BB1F60021C039 = {
 			isa = PBXGroup;
 			children = (
 				3797B00A198BB1F70021C039 /* KimsufiStock */,
 				3797B01D198BB1F70021C039 /* KimsufiStockTests */,
 				3797B009198BB1F70021C039 /* Products */,
+				39DB8C4C2BD84B5B99ADF1B3 /* Pods.xcconfig */,
+				BAB7B3CFAFA1457FA900614A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,11 +125,16 @@
 		3797B00A198BB1F70021C039 /* KimsufiStock */ = {
 			isa = PBXGroup;
 			children = (
+				3734408219A7777000D772F5 /* KimsufiStock-Bridging-Header.h */,
+				3734407C19A771C500D772F5 /* VOs */,
+				3734407919A770C000D772F5 /* Services */,
+				3734407619A76F1600D772F5 /* Models */,
+				3734407519A76F0A00D772F5 /* ViewControllers */,
 				3797B00D198BB1F70021C039 /* AppDelegate.swift */,
-				3797B00F198BB1F70021C039 /* MainViewController.swift */,
 				3797B011198BB1F70021C039 /* Main.storyboard */,
 				3797B014198BB1F70021C039 /* Images.xcassets */,
 				3797B00B198BB1F70021C039 /* Supporting Files */,
+				3734408519A779B800D772F5 /* SwiftyJSON.swift */,
 			);
 			path = KimsufiStock;
 			sourceTree = "<group>";
@@ -109,6 +164,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BAB7B3CFAFA1457FA900614A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F749A2F54B67442191B47A0C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3797B024198BB1F70021C039 /* Build configuration list for PBXNativeTarget "KimsufiStock" */;
 			buildPhases = (
+				EB247FB20B464B4A9CD08576 /* Check Pods Manifest.lock */,
 				3797B004198BB1F60021C039 /* Sources */,
 				3797B005198BB1F60021C039 /* Frameworks */,
 				3797B006198BB1F60021C039 /* Resources */,
+				E93892A242FE43DC80A208DC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,13 +269,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E93892A242FE43DC80A208DC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB247FB20B464B4A9CD08576 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3797B004198BB1F60021C039 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3797B010198BB1F70021C039 /* MainViewController.swift in Sources */,
+				3734407E19A771D200D772F5 /* UserVO.swift in Sources */,
 				3797B00E198BB1F70021C039 /* AppDelegate.swift in Sources */,
+				3734407819A76F2000D772F5 /* User.swift in Sources */,
+				3734408019A776D100D772F5 /* APIService.swift in Sources */,
+				3734408619A779B800D772F5 /* SwiftyJSON.swift in Sources */,
+				3734407B19A770F900D772F5 /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,29 +426,36 @@
 		};
 		3797B025198BB1F70021C039 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39DB8C4C2BD84B5B99ADF1B3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KimsufiStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KimsufiStock-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3797B026198BB1F70021C039 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39DB8C4C2BD84B5B99ADF1B3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KimsufiStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KimsufiStock-Bridging-Header.h";
 			};
 			name = Release;
 		};
