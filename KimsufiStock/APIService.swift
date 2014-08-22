@@ -26,11 +26,11 @@ class APIService
         self.delegate = delegate
     }
     
-    func createAccount()
+    func createAccount(token: String)
     {
         var parameters = [String: AnyObject]()
         
-        parameters["user"] = ["token": 1]
+        parameters["user"] = ["token": token]
 
         manager.POST(endpoint + "users",
             parameters: parameters,

@@ -12,7 +12,7 @@ class MainViewController: UIViewController, APIServiceProtocol
 {
     var apiService: APIService?
     let user = User()
-    var isLoaded = false
+    var needUpdate = false
     
     @IBOutlet weak var ks1Switch: UISwitch!
     @IBOutlet weak var ks2Switch: UISwitch!
@@ -27,6 +27,7 @@ class MainViewController: UIViewController, APIServiceProtocol
         let s = sender as UISwitch
         
         user.ks1 = s.on
+        needUpdate = true
     }
     
     @IBAction func ks2SwitchDidChange(sender: AnyObject)
@@ -34,6 +35,7 @@ class MainViewController: UIViewController, APIServiceProtocol
         let s = sender as UISwitch
         
         user.ks2 = s.on
+        needUpdate = true
     }
     
     @IBAction func ks3SwitchDidChange(sender: AnyObject)
@@ -41,6 +43,7 @@ class MainViewController: UIViewController, APIServiceProtocol
         let s = sender as UISwitch
         
         user.ks3 = s.on
+        needUpdate = true
     }
     
     @IBAction func ks4SwitchDidChange(sender: AnyObject)
@@ -48,6 +51,7 @@ class MainViewController: UIViewController, APIServiceProtocol
         let s = sender as UISwitch
 
         user.ks4 = s.on
+        needUpdate = true
     }
     
     @IBAction func ks5aSwitchDidChange(sender: AnyObject)
@@ -55,6 +59,7 @@ class MainViewController: UIViewController, APIServiceProtocol
         let s = sender as UISwitch
         
         user.ks5a = s.on
+        needUpdate = true
     }
     
     @IBAction func ks5bSwitchDidChange(sender: AnyObject)
@@ -62,6 +67,7 @@ class MainViewController: UIViewController, APIServiceProtocol
         let s = sender as UISwitch
         
         user.ks5b = s.on
+        needUpdate = true
     }
     
     @IBAction func ks6SwitchDidChange(sender: AnyObject)
@@ -69,6 +75,7 @@ class MainViewController: UIViewController, APIServiceProtocol
         let s = sender as UISwitch
         
         user.ks6 = s.on
+        needUpdate = true
     }
 
     func deleteData()
@@ -84,13 +91,22 @@ class MainViewController: UIViewController, APIServiceProtocol
         setupObserver()
         if user.id == nil
         {
-            self.apiService?.createAccount()
+            self.apiService?.createAccount("1")
         }
         else
         {
             setSwitch()
         }
-        isLoaded = true
+        let timerCounter = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "updateServer", userInfo: nil, repeats: true)
+    }
+    
+    func updateServer()
+    {
+        if needUpdate
+        {
+            apiService?.updateUser(user)
+            needUpdate = false
+        }
     }
     
     func setupObserver()
@@ -120,11 +136,6 @@ class MainViewController: UIViewController, APIServiceProtocol
         if user.ks1 != nil
         {
             setSwitch()
-            
-            if isLoaded
-            {
-                apiService?.updateUser(user)
-            }
         }
     }
 
