@@ -25,4 +25,17 @@ class UserVO
         self.id = id
         self.token = token
     }
+    
+    init(json: JSONValue)
+    {
+        self.id = json["user"]["id"].integer!
+        self.token = json["user"]["token"].string!
+        self.ks1 = json["user"]["need_ks1"].bool!
+        self.ks2 = json["user"]["need_ks2"].bool!
+        self.ks3 = json["user"]["need_ks3"].bool!
+        self.ks4 = json["user"]["need_ks4"].bool!
+        self.ks5a = json["user"]["need_ks5a"].bool!
+        self.ks5b = json["user"]["need_ks5b"].bool!
+        self.ks6 = json["user"]["need_ks6"].bool!
+    }
 }

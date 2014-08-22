@@ -163,12 +163,12 @@ class User : NSObject
     {
         self.id = vo.id
         self.token = vo.token
-        self.ks1 = vo.ks1
-        self.ks2 = vo.ks2
-        self.ks3 = vo.ks3
-        self.ks4 = vo.ks4
-        self.ks5a = vo.ks5a
-        self.ks5b = vo.ks5b
-        self.ks6 = vo.ks6
+        self.ks1 = Bool(vo.ks1)
+        self.ks2 = Bool(vo.ks2)
+        self.ks3 = Bool(vo.ks3)
+        self.ks4 = Bool(vo.ks4)
+        self.ks5a = Bool(vo.ks5a)
+        self.ks5b = Bool(vo.ks5b)
+        self.ks6 = Bool(vo.ks6)
     }
 }

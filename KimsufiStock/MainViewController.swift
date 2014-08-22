@@ -89,15 +89,16 @@ class MainViewController: UIViewController, APIServiceProtocol
         super.viewDidLoad()
         self.apiService = APIService(delegate: self)
         setupObserver()
-        if user.id == nil
-        {
-            self.apiService?.createAccount("1")
-        }
-        else
-        {
-            setSwitch()
-        }
+//        if user.id == nil
+//        {
+            self.apiService?.createAccount(token: "1")
+//        }
+//        else
+//        {
+//            setSwitch()
+//        }
         let timerCounter = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "updateServer", userInfo: nil, repeats: true)
+//        askForNotification()
     }
     
     func updateServer()
@@ -133,7 +134,7 @@ class MainViewController: UIViewController, APIServiceProtocol
     
     override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: [NSObject : AnyObject]!, context: UnsafeMutablePointer<()>)
     {
-        if user.ks1 != nil
+        if user.ks1 != nil && user.ks2 != nil && user.ks3 != nil && user.ks4 != nil && user.ks5a != nil && user.ks5b != nil && user.ks6 != nil
         {
             setSwitch()
         }

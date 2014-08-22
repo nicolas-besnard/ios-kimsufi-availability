@@ -43,6 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError)
+    {
+        println("fail remote \(error.localizedDescription)")
+    }
+    
     func application(application: UIApplication!, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!)
     {
         var characterSet: NSCharacterSet = NSCharacterSet(charactersInString: "<>")

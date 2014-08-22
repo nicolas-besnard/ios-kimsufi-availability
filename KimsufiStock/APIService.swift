@@ -16,7 +16,7 @@ protocol APIServiceProtocol
 class APIService
 {
     let manager = AFHTTPRequestOperationManager()
-    let endpoint = "http://localhost:3000/"
+    let endpoint = "http://192.168.206.47:3000/"
     
     var delegate: APIServiceProtocol?
     
@@ -26,7 +26,7 @@ class APIService
         self.delegate = delegate
     }
     
-    func createAccount(token: String)
+    func createAccount(#token: String)
     {
         var parameters = [String: AnyObject]()
         
@@ -46,11 +46,7 @@ class APIService
                 }
                 else if json["status"].string! == "ok"
                 {
-                    let id = json["user"]["id"].integer!
-                    let token = json["user"]["token"].string!
-                    
-                    let userVO = UserVO(id: id, token: token)
-                    self.delegate?.didReceivedUserVO(userVO)
+                    self.delegate?.didReceivedUserVO(UserVO(json: json))
                 }
             },
             failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
